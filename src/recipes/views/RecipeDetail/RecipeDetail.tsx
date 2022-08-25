@@ -45,7 +45,7 @@ const RecipeDetail = () => {
               )}
               {recipe.method[0]?.steps && recipe.method[0].steps.length > 0 && (
                 <Grid item xs={12}>
-                  <RecipeMethod method={recipe.method} />
+                  <RecipeMethod method={recipe.method[0]} />
                 </Grid>
               )}
             </Grid>

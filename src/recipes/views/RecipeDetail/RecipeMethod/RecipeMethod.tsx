@@ -1,20 +1,20 @@
 import Typography from "@suid/material/Typography";
+import { For } from "solid-js";
 
 import type { Method } from "recipes/types";
 
 interface RecipeMethodProps {
-  method: [Method]; // TODO: API should not return this in an array
+  method: Method;
 }
 
 const RecipeMethod = (props: RecipeMethodProps) => (
   <>
     <Typography variant="h5">Method</Typography>
-    {props.method[0]?.steps &&
-      props.method[0].steps.map((step) => {
-        const { description, stepNumber } = step;
-
-        return <Typography>{`${stepNumber}. ${description}`}</Typography>;
-      })}
+    <For each={props.method.steps}>
+      {(step) => (
+        <Typography>{`${step.stepNumber}. ${step.description}`}</Typography>
+      )}
+    </For>
   </>
 );
 
