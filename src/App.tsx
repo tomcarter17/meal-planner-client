@@ -1,26 +1,24 @@
-import type { Component } from "solid-js";
+import { Route, Router, Routes } from "@solidjs/router";
+import { lazy, Suspense } from "solid-js";
 
-import styles from "./App.module.css";
-import logo from "./logo.svg";
+import { Spinner } from "components";
+import { ProviderWrapper } from "utils/ProviderWrapper";
 
-const App: Component = () => {
+const RecipeDetail = lazy(() => import("recipes/views/RecipeDetail"));
+const RecipeList = lazy(() => import("recipes/views/RecipeList"));
+
+const App = () => {
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
-    </div>
+    <ProviderWrapper>
+      <Router>
+        <Suspense fallback={<Spinner />}>
+          <Routes>
+            <Route element={<RecipeList />} path="/" />
+            <Route element={<RecipeDetail />} path="/recipes/:recipeId" />
+          </Routes>
+        </Suspense>
+      </Router>
+    </ProviderWrapper>
   );
 };
 
