@@ -31,7 +31,7 @@ const RecipeDetail = () => {
           </Alert>
         </Box>
       </Show>
-      <Show when={recipe()}>
+      <Show when={recipe()} keyed>
         {(recipe) => (
           <Container>
             <Grid container spacing={3}>

@@ -28,7 +28,7 @@ const RecipeList = (): JSX.Element => {
           </Alert>
         </Box>
       </Show>
-      <Show when={data()?.results}>
+      <Show when={data()?.results} keyed>
         {(recipes) => (
           <Container sx={{ mt: 4 }}>
             <For each={recipes}>
