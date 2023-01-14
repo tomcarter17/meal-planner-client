@@ -18,7 +18,6 @@ module.exports = {
   plugins: [
     "import",
     "jsx-a11y",
-    "prettier",
     "security",
     "solid",
     "unicorn",
@@ -30,7 +29,6 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended",
     "plugin:security/recommended",
     "plugin:solid/typescript",
     "plugin:unicorn/recommended",
