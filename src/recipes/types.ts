@@ -29,4 +29,4 @@ export interface RecipeDetail extends Recipe {
   originalLink: string | null;
 }
 
-export type Unit = typeof UNITS[keyof typeof UNITS];
+export type Unit = (typeof UNITS)[keyof typeof UNITS];

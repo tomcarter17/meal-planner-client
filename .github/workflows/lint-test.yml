@@ -41,6 +41,9 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Check formatting
+        run: pnpm format
+
       # Re-enable when tests are created in Vite
       # - name: Test
       #   run: pnpm test
