@@ -4,10 +4,10 @@ import { Box } from "@suid/material/Box";
 import Container from "@suid/material/Container";
 import Grid from "@suid/material/Grid";
 import Typography from "@suid/material/Typography";
-import { createResource, Show } from "solid-js";
+import { Show } from "solid-js";
 
 import { Spinner } from "components";
-import { getRecipe } from "recipes/api/resources";
+import { createRecipe } from "recipes/api";
 
 import RecipeIngredients from "./RecipeIngredients";
 import RecipeMethod from "./RecipeMethod";
@@ -15,23 +15,23 @@ import RecipeMethod from "./RecipeMethod";
 const RecipeDetail = () => {
   const params = useParams<{ recipeId: string }>();
 
-  const [recipe] = createResource(() => params.recipeId, getRecipe);
+  const recipe = createRecipe(params.recipeId);
 
   return (
     <>
-      <Show when={recipe.loading}>
+      <Show when={recipe.isLoading}>
         <Spinner sx={{ height: "100%", width: "100%" }} />
       </Show>
       <Show when={recipe.error}>
         <Box p={3}>
           <Alert severity="error">
             <Typography>
-              Failed to load recipe: {recipe.error.message}
+              Failed to load recipe: {recipe.error?.message}
             </Typography>
           </Alert>
         </Box>
       </Show>
-      <Show when={recipe()} keyed>
+      <Show when={recipe.data} keyed>
         {(recipe) => (
           <Container>
             <Grid container spacing={3}>
