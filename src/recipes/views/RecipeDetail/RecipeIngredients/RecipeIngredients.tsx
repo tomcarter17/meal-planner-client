@@ -12,13 +12,11 @@ const RecipeIngredients = (props: RecipeIngredientsProps): JSX.Element => (
   <>
     <Typography variant="h5">Ingredients</Typography>
     {props.ingredients.map((ingredient) => {
-      const { amount, item, unit } = ingredient;
-
       // eslint-disable-next-line security/detect-object-injection
-      const unitString = UNIT_LABELS[unit] ?? "";
+      const unitString = UNIT_LABELS[ingredient.unit] ?? "";
 
       return (
-        <Typography component="div">{`${amount}${unitString} ${item}`}</Typography>
+        <Typography component="div">{`${ingredient.amount}${unitString} ${ingredient.item}`}</Typography>
       );
     })}
   </>
