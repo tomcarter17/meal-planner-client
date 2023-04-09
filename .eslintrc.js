@@ -31,6 +31,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:security/recommended",
     "plugin:solid/typescript",
+    "plugin:storybook/recommended",
     "plugin:unicorn/recommended",
   ],
   ignorePatterns: [".eslintrc.js"],
