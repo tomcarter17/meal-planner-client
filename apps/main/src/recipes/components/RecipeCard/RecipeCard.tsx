@@ -5,7 +5,7 @@ import Chip from "@suid/material/Chip";
 import { format, parseISO } from "date-fns";
 import { For } from "solid-js";
 
-import type { Recipe } from "recipes/types";
+import type { Recipe } from "../../types";
 
 export interface RecipeCardProps {
   recipe: Recipe;

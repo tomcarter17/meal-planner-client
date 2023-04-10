@@ -2,12 +2,12 @@ import Alert from "@suid/material/Alert";
 import { Box } from "@suid/material/Box";
 import Container from "@suid/material/Container";
 import Typography from "@suid/material/Typography";
-import type { JSX } from "solid-js";
-import { For, Show } from "solid-js";
-
 import { Spinner } from "components";
-import { createRecipeList } from "recipes/api";
-import { RecipeCard } from "recipes/components";
+import { For, Show } from "solid-js";
+import type { JSX } from "solid-js";
+
+import { createRecipeList } from "../../../recipes/api";
+import { RecipeCard } from "../../../recipes/components";
 
 const RecipeList = (): JSX.Element => {
   const recipes = createRecipeList();

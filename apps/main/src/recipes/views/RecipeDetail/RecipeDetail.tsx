@@ -4,13 +4,12 @@ import { Box } from "@suid/material/Box";
 import Container from "@suid/material/Container";
 import Grid from "@suid/material/Grid";
 import Typography from "@suid/material/Typography";
-import { Show } from "solid-js";
-
 import { Spinner } from "components";
-import { createRecipe } from "recipes/api";
+import { Show } from "solid-js";
 
 import RecipeIngredients from "./RecipeIngredients";
 import RecipeMethod from "./RecipeMethod";
+import { createRecipe } from "../../api/";
 
 const RecipeDetail = () => {
   const params = useParams<{ recipeId: string }>();

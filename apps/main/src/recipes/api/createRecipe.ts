@@ -2,8 +2,8 @@ import type { CreateQueryResult } from "@tanstack/solid-query";
 import { createQuery } from "@tanstack/solid-query";
 import type { AxiosError } from "axios";
 
-import type { RecipeDetail } from "recipes/types";
-import { createRequest, responseWrapper } from "utils/api";
+import type { RecipeDetail } from "../../recipes/types";
+import { createRequest, responseWrapper } from "../../utils/api";
 
 const queryFn = (recipeId: string) =>
   responseWrapper(

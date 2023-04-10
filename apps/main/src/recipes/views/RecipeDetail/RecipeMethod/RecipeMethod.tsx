@@ -1,7 +1,7 @@
 import Typography from "@suid/material/Typography";
 import { For } from "solid-js";
 
-import type { Method } from "recipes/types";
+import type { Method } from "../../../types";
 
 interface RecipeMethodProps {
   method: Method;

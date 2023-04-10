@@ -1,8 +1,8 @@
 import Typography from "@suid/material/Typography";
 import type { JSX } from "solid-js";
 
-import { UNIT_LABELS } from "recipes/constants";
-import type { Ingredient } from "recipes/types";
+import { UNIT_LABELS } from "../../../constants";
+import type { Ingredient } from "../../../types";
 
 interface RecipeIngredientsProps {
   ingredients: Ingredient[];
