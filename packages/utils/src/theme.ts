@@ -1,6 +1,6 @@
 import { createTheme } from "@suid/material";
 
-const theme = createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
       light: "#757ce8",
@@ -10,5 +10,3 @@ const theme = createTheme({
     },
   },
 });
-
-export default theme;

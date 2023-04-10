@@ -1,9 +1,10 @@
 {
-  "name": "main",
+  "name": "utils",
   "version": "0.0.0",
   "description": "",
   "license": "MIT",
   "private": true,
+  "main": "src/index.ts",
   "scripts": {
     "build": "vite build",
     "build-storybook": "storybook build",
@@ -18,15 +19,11 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "@solidjs/router": "^0.8.2",
     "@suid/material": "^0.11.1",
     "@suid/system": "^0.9.1",
     "@tanstack/solid-query": "^4.27.0",
     "axios": "^1.3.5",
-    "components": "workspace:*",
-    "date-fns": "^2.29.3",
-    "solid-js": "^1.7.3",
-    "utils": "workspace:*"
+    "solid-js": "^1.7.3"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.2",

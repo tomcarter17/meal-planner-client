@@ -3,7 +3,7 @@ import CssBaseline from "@suid/material/CssBaseline";
 import { QueryClient, QueryClientProvider } from "@tanstack/solid-query";
 import type { JSX } from "solid-js";
 
-import theme from "./theme";
+import { theme } from "./theme";
 
 const queryClient = new QueryClient();
 

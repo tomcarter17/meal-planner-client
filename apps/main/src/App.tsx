@@ -1,8 +1,7 @@
 import { Route, Router, Routes } from "@solidjs/router";
 import { Spinner } from "components";
 import { lazy, Suspense } from "solid-js";
-
-import { ProviderWrapper } from "./utils/ProviderWrapper";
+import { ProviderWrapper } from "utils";
 
 const RecipeDetail = lazy(() => import("./recipes/views/RecipeDetail"));
 const RecipeList = lazy(() => import("./recipes/views/RecipeList"));
