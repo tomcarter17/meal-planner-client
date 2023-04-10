@@ -3,7 +3,7 @@ import { createQuery } from "@tanstack/solid-query";
 import type { AxiosError } from "axios";
 import { createRequest, responseWrapper } from "utils";
 
-import type { RecipeDetail } from "../../recipes/types";
+import type { RecipeDetail } from "../types";
 
 const queryFn = (recipeId: string) =>
   responseWrapper(

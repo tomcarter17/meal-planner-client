@@ -4,7 +4,7 @@ import type { AxiosError } from "axios";
 import type { DjangoListResponse } from "utils";
 import { createRequest, responseWrapper } from "utils";
 
-import type { Recipe } from "../../recipes/types";
+import type { Recipe } from "../types";
 
 export const createRecipeList = (): CreateQueryResult<
   DjangoListResponse<Recipe>,

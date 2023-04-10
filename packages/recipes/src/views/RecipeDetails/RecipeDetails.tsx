@@ -9,7 +9,7 @@ import { Show } from "solid-js";
 
 import RecipeIngredients from "./RecipeIngredients";
 import RecipeMethod from "./RecipeMethod";
-import { createRecipe } from "../../api/";
+import { createRecipe } from "../../api";
 
 const RecipeDetail = () => {
   const params = useParams<{ recipeId: string }>();

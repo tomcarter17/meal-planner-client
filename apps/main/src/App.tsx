@@ -1,23 +1,28 @@
 import { Route, Router, Routes } from "@solidjs/router";
+import { CssBaseline, ThemeProvider } from "@suid/material";
+import { QueryClient, QueryClientProvider } from "@tanstack/solid-query";
 import { Spinner } from "components";
-import { lazy, Suspense } from "solid-js";
-import { ProviderWrapper } from "utils";
+import { RecipeDetails, RecipeList } from "recipes";
+import { Suspense } from "solid-js";
+import { theme } from "utils";
 
-const RecipeDetail = lazy(() => import("./recipes/views/RecipeDetail"));
-const RecipeList = lazy(() => import("./recipes/views/RecipeList"));
+const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
 
 const App = () => {
   return (
-    <ProviderWrapper>
+    <ThemeProvider theme={theme}>
+    <QueryClientProvider client={queryClient}>
+      <CssBaseline />
       <Router>
         <Suspense fallback={<Spinner />}>
           <Routes>
             <Route element={<RecipeList />} path="/" />
-            <Route element={<RecipeDetail />} path="/recipes/:recipeId" />
+            <Route element={<RecipeDetails />} path="/recipes/:recipeId" />
           </Routes>
         </Suspense>
       </Router>
-    </ProviderWrapper>
+    </QueryClientProvider>
+  </ThemeProvider>
   );
 };
 

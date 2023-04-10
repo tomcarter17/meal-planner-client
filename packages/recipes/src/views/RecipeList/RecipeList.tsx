@@ -6,8 +6,8 @@ import { Spinner } from "components";
 import { For, Show } from "solid-js";
 import type { JSX } from "solid-js";
 
-import { createRecipeList } from "../../../recipes/api";
-import { RecipeCard } from "../../../recipes/components";
+import { createRecipeList } from "../../api";
+import { RecipeCard } from "../../components";
 
 const RecipeList = (): JSX.Element => {
   const recipes = createRecipeList();
