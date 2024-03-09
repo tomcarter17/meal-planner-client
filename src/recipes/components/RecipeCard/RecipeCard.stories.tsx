@@ -1,6 +1,5 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-
-import { withRouter } from "utils/stories";
+import type { Meta, StoryObj } from "@storybook/react";
+import { withRouter } from "storybook-addon-react-router-v6";
 
 import { RecipeCard } from "./RecipeCard";
 

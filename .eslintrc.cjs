@@ -9,6 +9,7 @@ module.exports = {
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:storybook/recommended",
   ],
   settings: {
     "import/resolver": {
