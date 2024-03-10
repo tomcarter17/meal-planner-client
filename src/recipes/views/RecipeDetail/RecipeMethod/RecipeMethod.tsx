@@ -17,7 +17,9 @@ export const RecipeMethod = ({ steps }: RecipeMethodProps) => {
     <>
       <Typography variant="h5">Method</Typography>
       {sortedMethodSteps.map((step) => (
-        <Typography>{`${step.stepNumber}. ${step.description}`}</Typography>
+        <Typography
+          key={step.stepNumber}
+        >{`${step.stepNumber}. ${step.description}`}</Typography>
       ))}
     </>
   );

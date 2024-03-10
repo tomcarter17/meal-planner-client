@@ -21,7 +21,7 @@ export const RecipeList = (): JSX.Element => {
       {recipes?.results && (
         <Container sx={{ mt: 4 }}>
           {recipes.results.map((recipe) => (
-            <RecipeCard recipe={recipe} />
+            <RecipeCard key={recipe.id} recipe={recipe} />
           ))}
         </Container>
       )}

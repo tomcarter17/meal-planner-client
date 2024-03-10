@@ -21,7 +21,7 @@ export const RecipeCard = ({ recipe }: RecipeCardProps) => {
       />
       <CardContent>
         {recipe.tags.map((tag) => (
-          <Chip label={tag.name} sx={{ m: 0.5 }} />
+          <Chip key={tag.id} label={tag.name} sx={{ m: 0.5 }} />
         ))}
       </CardContent>
     </Card>

@@ -10,7 +10,9 @@ export const RecipeIngredients = ({ ingredients }: RecipeIngredientsProps) => (
   <>
     <Typography variant="h5">Ingredients</Typography>
     {ingredients.map((ingredient) => (
-      <Typography component="div">{ingredient.name}</Typography>
+      <Typography key={ingredient.id} component="div">
+        {ingredient.name}
+      </Typography>
     ))}
   </>
 );

@@ -8,6 +8,8 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:storybook/recommended",
   ],
@@ -20,7 +22,7 @@ module.exports = {
   },
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
-  plugins: ["react-refresh", "import", "jsx-a11y"],
+  plugins: ["react", "react-refresh", "import", "jsx-a11y"],
   rules: {
     "@typescript-eslint/consistent-type-imports": "error",
     "react-refresh/only-export-components": [
