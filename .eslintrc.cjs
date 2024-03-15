@@ -19,6 +19,9 @@ module.exports = {
         paths: ["src"],
       },
     },
+    react: {
+      version: "detect",
+    },
   },
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",

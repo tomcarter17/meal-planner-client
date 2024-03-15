@@ -2,8 +2,8 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 
 import { Spinner } from "components/Spinner";
-import { ProviderWrapper } from "utils/ProviderWrapper";
 import { Router } from "router";
+import { ProviderWrapper } from "utils/ProviderWrapper";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
