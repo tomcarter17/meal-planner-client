@@ -3,7 +3,8 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:import/errors",
     "plugin:import/typescript",
     "plugin:import/warnings",
@@ -24,7 +25,13 @@ module.exports = {
     },
   },
   ignorePatterns: ["dist", ".eslintrc.cjs"],
-  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
+    tsconfigRootDir: __dirname,
+  },
   plugins: ["react", "react-refresh", "import", "jsx-a11y"],
   rules: {
     "@typescript-eslint/consistent-type-imports": "error",

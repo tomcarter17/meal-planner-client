@@ -8,14 +8,15 @@ import { RecipeIngredients } from "./RecipeIngredients";
 import RecipeMethod from "./RecipeMethod";
 
 export const RecipeDetail = () => {
-  const params = useParams<{ recipeId: string }>();
+  const { recipeId } = useParams<{ recipeId: string }>();
 
   const {
     data: recipe,
     error,
     isError,
     isLoading,
-  } = useRecipe(params.recipeId!);
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  } = useRecipe(recipeId!);
 
   return (
     <>
@@ -33,12 +34,12 @@ export const RecipeDetail = () => {
             <Grid item xs={12}>
               <Typography variant="h3">{recipe.title}</Typography>
             </Grid>
-            {recipe.ingredients?.length && (
+            {recipe.ingredients.length && (
               <Grid item xs={12}>
-                <RecipeIngredients ingredients={recipe.ingredients ?? []} />
+                <RecipeIngredients ingredients={recipe.ingredients} />
               </Grid>
             )}
-            {recipe.steps && recipe.steps.length > 0 && (
+            {recipe.steps.length > 0 && (
               <Grid item xs={12}>
                 <RecipeMethod steps={recipe.steps} />
               </Grid>

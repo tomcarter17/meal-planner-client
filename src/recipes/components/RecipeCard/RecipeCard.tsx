@@ -11,7 +11,9 @@ export interface RecipeCardProps {
 export const RecipeCard = ({ recipe }: RecipeCardProps) => {
   const navigate = useNavigate();
 
-  const onClick = () => navigate(`/recipes/${recipe.id}`);
+  const onClick = () => {
+    navigate(`/recipes/${recipe.id}`);
+  };
 
   return (
     <Card onClick={onClick} raised sx={{ cursor: "pointer" }}>
