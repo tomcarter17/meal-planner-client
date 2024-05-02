@@ -71,6 +71,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "pnpm": ">=9"
+  },
   "lint-staged": {
     "*.{ts,tsx}": [
       "pnpm lint:fix",
