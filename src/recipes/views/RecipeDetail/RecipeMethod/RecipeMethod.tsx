@@ -19,7 +19,7 @@ export const RecipeMethod = ({ steps }: RecipeMethodProps) => {
       {sortedMethodSteps.map((step) => (
         <Typography
           key={step.stepNumber}
-        >{`${step.stepNumber}. ${step.description}`}</Typography>
+        >{`${step.stepNumber.toString()}. ${step.description}`}</Typography>
       ))}
     </>
   );

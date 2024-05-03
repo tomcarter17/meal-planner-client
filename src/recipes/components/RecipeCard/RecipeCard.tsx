@@ -12,7 +12,7 @@ export const RecipeCard = ({ recipe }: RecipeCardProps) => {
   const navigate = useNavigate();
 
   const onClick = () => {
-    navigate(`/recipes/${recipe.id}`);
+    navigate(`/recipes/${recipe.id.toString()}`);
   };
 
   return (
