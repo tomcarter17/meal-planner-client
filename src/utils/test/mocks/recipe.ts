@@ -8,31 +8,31 @@ export const mockRecipesResponse: DjangoListResponse<Recipe> = {
   results: [
     {
       id: 1,
-      createdAt: "",
+      createdAt: new Date(2024, 12, 1).toISOString(),
       tags: [],
       title: "Recipe 1",
     },
     {
       id: 2,
-      createdAt: "",
+      createdAt: new Date(2024, 12, 1).toISOString(),
       tags: [],
       title: "Recipe 2",
     },
     {
       id: 3,
-      createdAt: "",
+      createdAt: new Date(2024, 12, 1).toISOString(),
       tags: [],
       title: "Recipe 3",
     },
     {
       id: 4,
-      createdAt: "",
+      createdAt: new Date(2024, 12, 1).toISOString(),
       tags: [],
       title: "Recipe 4",
     },
     {
       id: 5,
-      createdAt: "",
+      createdAt: new Date(2024, 12, 1).toISOString(),
       tags: [],
       title: "Recipe 5",
     },

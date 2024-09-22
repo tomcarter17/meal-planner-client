@@ -24,7 +24,7 @@ module.exports = {
       version: "detect",
     },
   },
-  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  ignorePatterns: ["dist", ".eslintrc.cjs", "public/mockServiceWorker.js"],
   parserOptions: {
     parser: "@typescript-eslint/parser",
     ecmaVersion: "latest",

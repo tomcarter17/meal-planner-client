@@ -10,6 +10,7 @@ export const RecipeList = (): JSX.Element => {
   return (
     <>
       {isLoading && <Spinner sx={{ height: "100%", width: "100%" }} />}
+
       {isError && (
         <Box p={3}>
           <Alert severity="error">
@@ -20,9 +21,11 @@ export const RecipeList = (): JSX.Element => {
 
       {recipes?.results && (
         <Container sx={{ mt: 4 }}>
-          {recipes.results.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
-          ))}
+          <Box display="flex" flexDirection="column" gap={2}>
+            {recipes.results.map((recipe) => (
+              <RecipeCard key={recipe.id} recipe={recipe} />
+            ))}
+          </Box>
         </Container>
       )}
     </>
