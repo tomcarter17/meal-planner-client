@@ -17,6 +17,6 @@ export const useRecipe = (
   recipeId: string,
 ): UseQueryResult<RecipeDetail, AxiosError> =>
   useQuery({
-    queryKey: ["recipe", { recipeId }],
+    queryKey: ["recipe", "detail", recipeId],
     queryFn: () => query(recipeId),
   });

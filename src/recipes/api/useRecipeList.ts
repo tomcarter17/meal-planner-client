@@ -11,7 +11,7 @@ export const useRecipeList = (): UseQueryResult<
   AxiosError
 > =>
   useQuery({
-    queryKey: ["recipe-list"],
+    queryKey: ["recipe", "list"],
     queryFn: () =>
       responseWrapper(
         createRequest({
