@@ -43,8 +43,8 @@
     "@tanstack/eslint-plugin-query": "^5.57.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.0.1",
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^8.12.2",
     "@typescript-eslint/parser": "^8.12.2",
     "@vitejs/plugin-react-swc": "^3.6.0",
@@ -64,10 +64,10 @@
     "prettier": "^3.2.5",
     "storybook": "^8.3.2",
     "storybook-addon-remix-react-router": "^3.0.0",
-    "typescript": "^5.4.5",
+    "typescript": "^5.6.3",
     "typescript-eslint": "^8.12.2",
     "vite": "^5.2.11",
-    "vite-tsconfig-paths": "^4.3.2",
+    "vite-tsconfig-paths": "^5.0.1",
     "vitest": "^2.0.5"
   },
   "browserslist": {
