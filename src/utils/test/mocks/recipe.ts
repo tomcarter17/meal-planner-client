@@ -1,5 +1,5 @@
-import type { Recipe } from "recipes/types";
-import type { DjangoListResponse } from "utils/api";
+import { type Recipe } from "recipes/types";
+import { type DjangoListResponse } from "utils/api";
 
 export const mockRecipesResponse: DjangoListResponse<Recipe> = {
   count: 5,

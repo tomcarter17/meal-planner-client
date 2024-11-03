@@ -1,4 +1,4 @@
-import { Alert, Container, Grid, Typography } from "@mui/material";
+import { Alert, Container, Grid2, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 
 import { Spinner } from "components/Spinner";
@@ -30,21 +30,21 @@ export const RecipeDetail = () => {
 
       {recipe && (
         <Container>
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
+          <Grid2 container spacing={3}>
+            <Grid2 size={{ xs: 12 }}>
               <Typography variant="h3">{recipe.title}</Typography>
-            </Grid>
+            </Grid2>
             {recipe.ingredients.length && (
-              <Grid item xs={12}>
+              <Grid2 size={{ xs: 12 }}>
                 <RecipeIngredients ingredients={recipe.ingredients} />
-              </Grid>
+              </Grid2>
             )}
             {recipe.steps.length > 0 && (
-              <Grid item xs={12}>
+              <Grid2 size={{ xs: 12 }}>
                 <RecipeMethod steps={recipe.steps} />
-              </Grid>
+              </Grid2>
             )}
-          </Grid>
+          </Grid2>
         </Container>
       )}
     </>

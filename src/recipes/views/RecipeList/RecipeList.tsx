@@ -1,4 +1,5 @@
 import { Alert, Box, Container, Typography } from "@mui/material";
+import { type JSX } from "react";
 
 import { Spinner } from "components/Spinner";
 import { useRecipeList } from "recipes/api";

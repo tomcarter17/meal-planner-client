@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-import type { Ingredient } from "recipes/types";
+import { type Ingredient } from "recipes/types";
 
 interface RecipeIngredientsProps {
   ingredients: Ingredient[];

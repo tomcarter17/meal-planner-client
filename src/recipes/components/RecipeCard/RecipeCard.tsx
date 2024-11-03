@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, Chip } from "@mui/material";
 import { format, parseISO } from "date-fns";
 import { useNavigate } from "react-router-dom";
 
-import type { Recipe } from "recipes/types";
+import { type Recipe } from "recipes/types";
 
 export interface RecipeCardProps {
   recipe: Recipe;
