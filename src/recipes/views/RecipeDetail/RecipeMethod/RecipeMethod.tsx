@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { useMemo } from "react";
 
-import type { Step } from "recipes/types";
+import { type Step } from "recipes/types";
 
 interface RecipeMethodProps {
   steps: Step[];

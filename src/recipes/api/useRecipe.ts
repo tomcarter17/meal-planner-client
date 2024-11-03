@@ -1,8 +1,8 @@
-import type { UseQueryResult } from "@tanstack/react-query";
+import { type UseQueryResult } from "@tanstack/react-query";
 import { useQuery } from "@tanstack/react-query";
-import type { AxiosError } from "axios";
+import { type AxiosError } from "axios";
 
-import type { RecipeDetail } from "recipes/types";
+import { type RecipeDetail } from "recipes/types";
 import { createRequest, responseWrapper } from "utils/api";
 
 const query = (recipeId: string) =>
