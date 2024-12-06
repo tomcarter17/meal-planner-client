@@ -4,14 +4,21 @@ import ReactDOM from "react-dom/client";
 import { Spinner } from "components/Spinner";
 import { Router } from "router";
 import { ProviderWrapper } from "utils/ProviderWrapper";
+import { enableMocking } from "utils/test/browser";
 
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <ProviderWrapper>
-      <Suspense fallback={<Spinner />}>
-        <Router />
-      </Suspense>
-    </ProviderWrapper>
-  </React.StrictMode>,
-);
+enableMocking()
+  .then(() => {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    ReactDOM.createRoot(document.getElementById("root")!).render(
+      <React.StrictMode>
+        <ProviderWrapper>
+          <Suspense fallback={<Spinner />}>
+            <Router />
+          </Suspense>
+        </ProviderWrapper>
+      </React.StrictMode>,
+    );
+  })
+  .catch(() => {
+    console.log("Failed to start mocking");
+  });
