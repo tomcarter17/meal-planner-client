@@ -71,7 +71,7 @@
     ]
   },
   "engines": {
-    "pnpm": ">=9"
+    "pnpm": "9"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
