@@ -26,9 +26,7 @@ jobs:
         run: pnpm install
 
       - name: Lint
-        run: |
-          pnpm lint:oxlint
-          pnpm lint:eslint
+        run: pnpm lint
 
       - name: Check formatting
         run: pnpm format

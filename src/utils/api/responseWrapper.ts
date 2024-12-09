@@ -1,7 +1,5 @@
 import { type AxiosResponse, type AxiosPromise } from "axios";
 
-// TODO: Figure out a way to satisfy this rule
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
 const baseMapper = <T, M = T>(response: AxiosResponse<T>): M =>
   response.data as T | M as M;
 

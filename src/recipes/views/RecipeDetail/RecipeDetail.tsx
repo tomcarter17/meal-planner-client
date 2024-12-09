@@ -10,13 +10,7 @@ import RecipeMethod from "./RecipeMethod";
 export const RecipeDetail = () => {
   const { recipeId } = useParams<{ recipeId: string }>();
 
-  const {
-    data: recipe,
-    error,
-    isError,
-    isLoading,
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  } = useRecipe(recipeId!);
+  const { data: recipe, error, isError, isLoading } = useRecipe(recipeId!);
 
   return (
     <>
