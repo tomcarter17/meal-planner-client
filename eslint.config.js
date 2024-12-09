@@ -7,6 +7,7 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import pluginQuery from "@tanstack/eslint-plugin-query";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import storybook from "eslint-plugin-storybook";
+import oxlint from "eslint-plugin-oxlint";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -17,6 +18,7 @@ export default [
   importPlugin.flatConfigs.typescript,
   importPlugin.flatConfigs.warnings,
   jsxA11y.flatConfigs.recommended,
+  oxlint.configs["flat/recommended"],
   ...pluginQuery.configs["flat/recommended"],
   pluginReact.configs.flat.recommended,
   pluginReact.configs.flat["jsx-runtime"],

@@ -99,6 +99,9 @@ importers:
       eslint-plugin-jsx-a11y:
         specifier: ^6.10.2
         version: 6.10.2(eslint@9.14.0)
+      eslint-plugin-oxlint:
+        specifier: ^0.14.1
+        version: 0.14.1
       eslint-plugin-react:
         specifier: ^7.37.2
         version: 7.37.2(eslint@9.14.0)
@@ -129,6 +132,9 @@ importers:
       msw-storybook-addon:
         specifier: ^2.0.3
         version: 2.0.3(msw@2.4.9(typescript@5.6.3))
+      oxlint:
+        specifier: ^0.14.1
+        version: 0.14.1
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -147,6 +153,9 @@ importers:
       vite:
         specifier: ^5.2.11
         version: 5.2.11(@types/node@22.5.5)
+      vite-plugin-oxlint:
+        specifier: ^1.1.0
+        version: 1.1.0(oxlint@0.14.1)
       vite-tsconfig-paths:
         specifier: ^5.0.1
         version: 5.0.1(typescript@5.6.3)(vite@5.2.11(@types/node@22.5.5))
@@ -686,6 +695,46 @@ packages:
 
   '@open-draft/until@2.1.0':
     resolution: {integrity: sha512-U69T3ItWHvLwGg5eJ0n3I62nWuE6ilHlmz7zM0npLBRvPRd7e6NYmg54vvRtP5mZG7kZqZCFVdsTWo7BPtBujg==}
+
+  '@oxlint/darwin-arm64@0.14.1':
+    resolution: {integrity: sha512-P76G8QCHOkLm+8HYk2/5uR4sPnx6uxE5Y8ik8dgCV0XjrNR+/Sg8v2aQ1BmWeEnPGkBXTt1VSECO9BdT1HVeDw==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@oxlint/darwin-x64@0.14.1':
+    resolution: {integrity: sha512-bFsNkDtiDEhBKsX2DGLGCVhaRSDP2VgnNHOejjVnLK2LURvOglHMrp4NXxxtHArPAfiP6oezja6q8GmsQbcZ4w==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@oxlint/linux-arm64-gnu@0.14.1':
+    resolution: {integrity: sha512-OWJY1qxJgsaLyQvh97MdpI2Mr8FD90ssGw8o0rG63lWIc3PJESmq9NKU0ZwwUbPbbEpKmwdG3aiZRjh4G1k0cQ==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@oxlint/linux-arm64-musl@0.14.1':
+    resolution: {integrity: sha512-GPbggyGQV4+5JzpA7l+1liPHkzCDB9ZyPLcHpRtNJJfTQ60JnBww4l3eR7LCukiAor6Sxmlbl+t1OZGjL3zUUA==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@oxlint/linux-x64-gnu@0.14.1':
+    resolution: {integrity: sha512-4ug2y9fEa2MB4wAFfITkm1oJ2m14YjWQaKxKN9bRazPng2k3wivVAvwc6tKj866HftZxXo3FlOIrE1YP6BxcSw==}
+    cpu: [x64]
+    os: [linux]
+
+  '@oxlint/linux-x64-musl@0.14.1':
+    resolution: {integrity: sha512-bsG5ZxFWKml6BQMHbusvNsEU3O0a5BurlrtdXyxlOBZyrWyG6v3pcXM+NX4YT8gaeoK71iCH5I+ymwI9KOwO/w==}
+    cpu: [x64]
+    os: [linux]
+
+  '@oxlint/win32-arm64@0.14.1':
+    resolution: {integrity: sha512-Soc3kRTqz++kleXz+Y4IlfiGY+cwXlOiLCVwcRMAnY+TSaP4h2tPXN/cbOypsE7PPq2/kk7JPGUaEKZ/i4G23A==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@oxlint/win32-x64@0.14.1':
+    resolution: {integrity: sha512-qyjlv5XPxKJ1g9F4ZpNP0m/I2tgHj4lebmyAveaLos3RZWut983WaK3abq4Mr74mIiwfyLA67/m2khG5aXYN2Q==}
+    cpu: [x64]
+    os: [win32]
 
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
@@ -1896,6 +1945,9 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
 
+  eslint-plugin-oxlint@0.14.1:
+    resolution: {integrity: sha512-P1IrDS3sRl/2AJwvwJmW1EnsF0AIzUHii8haSkWj8xm5+BW/Gux8S+SXu8uqgJoKkzvV+X7lDxPm4ao4C+COBw==}
+
   eslint-plugin-react-hooks@5.0.0:
     resolution: {integrity: sha512-hIOwI+5hYGpJEc4uPRmz2ulCjAGD/N13Lukkh8cLV0i2IRk/bdZDYjgLVHj+U9Z704kLIdIO6iueGvxNur0sgw==}
     engines: {node: '>=10'}
@@ -2460,6 +2512,9 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
+  jsonc-parser@3.3.1:
+    resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
+
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
 
@@ -2720,6 +2775,11 @@ packages:
 
   outvariant@1.4.3:
     resolution: {integrity: sha512-+Sl2UErvtsoajRDKCE5/dBz4DIvHXQQnAxtQTF04OJxY0+DyZXSo5P5Bb7XYWOh81syohlYL24hbDwxedPUJCA==}
+
+  oxlint@0.14.1:
+    resolution: {integrity: sha512-FwcjPfQu806ibSv73Y9tUM8ezUyd811dp3JwEEOC/dIAgd93egRsRNnFauuAq/WuTjIDv73tbr9hB8MziH31Eg==}
+    engines: {node: '>=14.*'}
+    hasBin: true
 
   p-limit@2.3.0:
     resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
@@ -3417,6 +3477,11 @@ packages:
     resolution: {integrity: sha512-LdsW4pxj0Ot69FAoXZ1yTnA9bjGohr2yNBU7QKRxpz8ITSkhuDl6h3zS/tvgz4qrNjeRnvrWeXQ8ZF7Um4W00Q==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
+
+  vite-plugin-oxlint@1.1.0:
+    resolution: {integrity: sha512-b+KgDGEM7a7c+jExQ8JuoZMomjj2dtV8rkb0PSKcdWrMKjTdBNg0/7l+Mkg71OJbyF8SCBXRYgaw8CnstU3rlw==}
+    peerDependencies:
+      oxlint: ^0.10.2
 
   vite-tsconfig-paths@5.0.1:
     resolution: {integrity: sha512-yqwv+LstU7NwPeNqajZzLEBVpUFU6Dugtb2P84FXuvaoYA+/70l9MHE+GYfYAycVyPSDYZ7mjOFuYBRqlEpTig==}
@@ -4120,6 +4185,30 @@ snapshots:
       outvariant: 1.4.3
 
   '@open-draft/until@2.1.0': {}
+
+  '@oxlint/darwin-arm64@0.14.1':
+    optional: true
+
+  '@oxlint/darwin-x64@0.14.1':
+    optional: true
+
+  '@oxlint/linux-arm64-gnu@0.14.1':
+    optional: true
+
+  '@oxlint/linux-arm64-musl@0.14.1':
+    optional: true
+
+  '@oxlint/linux-x64-gnu@0.14.1':
+    optional: true
+
+  '@oxlint/linux-x64-musl@0.14.1':
+    optional: true
+
+  '@oxlint/win32-arm64@0.14.1':
+    optional: true
+
+  '@oxlint/win32-x64@0.14.1':
+    optional: true
 
   '@popperjs/core@2.11.8': {}
 
@@ -5577,6 +5666,10 @@ snapshots:
       safe-regex-test: 1.0.3
       string.prototype.includes: 2.0.1
 
+  eslint-plugin-oxlint@0.14.1:
+    dependencies:
+      jsonc-parser: 3.3.1
+
   eslint-plugin-react-hooks@5.0.0(eslint@9.14.0):
     dependencies:
       eslint: 9.14.0
@@ -6177,6 +6270,8 @@ snapshots:
 
   json5@2.2.3: {}
 
+  jsonc-parser@3.3.1: {}
+
   jsonfile@6.1.0:
     dependencies:
       universalify: 2.0.1
@@ -6451,6 +6546,17 @@ snapshots:
       type-check: 0.4.0
 
   outvariant@1.4.3: {}
+
+  oxlint@0.14.1:
+    optionalDependencies:
+      '@oxlint/darwin-arm64': 0.14.1
+      '@oxlint/darwin-x64': 0.14.1
+      '@oxlint/linux-arm64-gnu': 0.14.1
+      '@oxlint/linux-arm64-musl': 0.14.1
+      '@oxlint/linux-x64-gnu': 0.14.1
+      '@oxlint/linux-x64-musl': 0.14.1
+      '@oxlint/win32-arm64': 0.14.1
+      '@oxlint/win32-x64': 0.14.1
 
   p-limit@2.3.0:
     dependencies:
@@ -7224,6 +7330,10 @@ snapshots:
       - sugarss
       - supports-color
       - terser
+
+  vite-plugin-oxlint@1.1.0(oxlint@0.14.1):
+    dependencies:
+      oxlint: 0.14.1
 
   vite-tsconfig-paths@5.0.1(typescript@5.6.3)(vite@5.2.11(@types/node@22.5.5)):
     dependencies:
